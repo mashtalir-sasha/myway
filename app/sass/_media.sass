@@ -1,0 +1,222 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.nav
+		&-list
+			&__item
+				margin: 0 8px
+				font-size: 15px
+	.price
+		&-block
+			&__price
+				width: 100%
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.nav
+		&-phone
+			display: table
+			float: none
+			margin: 0 auto
+	.first
+		&-block
+			&__txt
+				font-size: 20px
+	.progress
+		&-ttl
+			font-size: 46px
+		&-slider
+			padding: 60px 100px
+		.slick-dots
+			bottom: 0
+	.timetable
+		background-image: url(../img/timetable_bg_sm.jpg)
+		background-repeat: no-repeat
+		.row
+			min-height: 0
+		&-ttl
+			font-size: 46px
+	.gallery
+		&-ttl
+			font-size: 46px
+	.food
+		&-ttl
+			font-size: 46px
+	.mob
+		&-mnu
+			width: 100%
+			z-index: 10
+			height: 0
+			background-color: rgba(#000, .85)
+			position: fixed
+			top: 0
+			left: 0
+			overflow: hidden
+			transition: all ease .3s
+			&.show
+				height: 100vh
+				transition: all ease .3s
+			&__humb
+				display: table
+				float: right
+				position: relative
+				z-index: 1
+				cursor: pointer
+			&-flex
+				display: flex
+				min-height: 100vh
+				&__content
+					margin: auto
+			&-list
+				display: table
+				margin: 0 auto
+				overflow: hidden
+				padding-left: 0
+				margin-bottom: 0
+				list-style-type: none
+				&__item
+					display: table
+					margin: 0 auto 20px
+					&:last-child
+						margin-bottom: 40px
+					a
+						display: block
+						padding: 2px 0
+						margin: 0 15px
+						font-family: $bold-font
+						color: #fff
+						border-bottom: 1px dashed #fff
+						&:hover
+							color: darken(#fff, 10%)
+							border-color: darken(#fff, 10%)
+			&__close
+				text-align: center
+				color: #fff
+				font-family: sans-serif
+				font-size: 20px
+				margin-top: 20px
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.nav
+		&-phone
+			margin: 20px auto 0
+	.first
+		&-block
+			margin-bottom: 40px
+			&.last
+				margin-bottom: 0
+	.progress
+		&-slider
+			padding: 30px 100px
+	.timetable
+		background: none
+		padding-bottom: 0
+		&-ttl
+			text-align: center
+		&-txt
+			text-align: center
+		&-btn
+			margin: 0 auto 20px
+	.gallery
+		&-img
+			&_last
+				margin-bottom: 20px
+				&_sm
+					margin-bottom: 0
+	.food
+		&-img
+			margin-top: 100px
+		&-txt
+			text-align: center
+		&-subttl
+			text-align: center
+		&-btn
+			margin: 0 auto
+	.price
+		&-circle
+			display: none
+		&-block
+			margin-left: 0
+			&__ttl
+				text-align: center
+			&__txt
+				text-align: center
+	.map
+		height: 300px
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+	.head
+		&-ttl
+			border: none
+			padding: 0
+			font-size: 30px
+			span
+				font-size: 72px
+				margin: 15px 0 0
+		&-ico
+			margin: 0 auto 40px
+			&.last
+				margin-bottom: 0
+	.first
+		&-ttl
+			span
+				font-size: 50px
+		&-btn
+			padding: 12px 20px
+	.progress
+		&-ttl
+			font-size: 40px
+		&-slider
+			padding: 30px 0
+		.slick-arrow
+			top: inherit
+			bottom: 10px
+			margin-top: 0
+	.timetable
+		&-ttl
+			font-size: 40px
+		&-btn
+			padding: 12px 20px
+	.gallery
+		&-ttl
+			font-size: 40px
+	.food
+		&-ttl
+			font-size: 40px
+		&-btn
+			padding: 12px 20px
+	.price
+		&-block
+			padding: 0 0 40px
+			&__btn
+				padding: 12px 20px
+	.foot
+		&-addr
+			text-align: center
+		&-phone
+			&__link
+				text-align: center
+		&-soc
+			display: table
+			margin: 0 auto 20px
+		&-email
+			text-align: center
+			margin-bottom: 20px
+	.time-modal
+		&__txt
+			span
+				width: 35%
+			p
+				width: 60%
